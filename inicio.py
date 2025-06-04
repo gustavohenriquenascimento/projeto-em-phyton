@@ -22,7 +22,7 @@ for i in range(2):
 soma = 0
 
 while True:
-    var3= [int(input('número do candidato votado'))]
+    var3= int(input('número do candidato votado  :'))
     
     numero = int(input("Digite um número (0|sair,1|continuar: "))
     
@@ -31,25 +31,24 @@ while True:
         continue  # Volta para o início do laço, sem executar o restante
     if numero == 0:
         break  # Sai do laço
-for item in var3:    
-    if item == matriz2[0][0]:
+    if var3== matriz2[0][0]:
         print(f"você votou no candidato {matriz1[0][0]}")
         cand_1 += 1
-    if item == matriz2[0][1]:
+    if var3 == matriz2[0][1]:
          print(f"você votou no candidato {matriz1[0][1]}")
          cand_2 += 1
-    if item == matriz2[0][2]:
+    if var3 == matriz2[0][2]:
          print(f"você votou no candidato {matriz1[0][2]}")
          cand_3 += 1
-    if item == matriz2[1][0]:
+    if var3 == matriz2[1][0]:
          print(f"você votou no candidato {matriz1[1][0]}")
          cand_4 += 1
-    if item == matriz2[1][1]:
+    if var3 == matriz2[1][1]:
          print(f"você votou no candidato {matriz1[1][1]}")
          cand_5 += 1
-    if item == matriz2[1][2]:
+    if var3 == matriz2[1][2]:
          print(f"você votou no candidato {matriz1[1][2]}")
          cand_6 += 1
 
 
-print(cand_3)
+print(f'{cand_1,cand_2,cand_3,cand_4,cand_5,cand_6}')
