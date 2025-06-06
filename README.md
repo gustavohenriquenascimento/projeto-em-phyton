@@ -1,2 +1,8 @@
 # projeto-em-phyton
-relógio digital que funcione em tempo real.
+urna eletrônica.
+
+INTEGRANTES DO GRUPO:
+
+gustavo henrique nascimento silva
+joanderson souza da silva
+
