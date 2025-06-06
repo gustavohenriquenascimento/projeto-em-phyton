@@ -49,6 +49,21 @@ while True:
     if var3 == matriz2[1][2]:
          print(f"você votou no candidato {matriz1[1][2]}")
          cand_6 += 1
+    if var3 not in matriz2[0] and var3 not in matriz2[1]:
+        print('Nenhum voto computado.')
+        
+total_votos = cand_1 + cand_2 + cand_3 + cand_4 + cand_5 + cand_6
 
+if total_votos > 0:
+    print('\nPorcentagem de votos:')
+    print(f'Candidato 1: {cand_1/total_votos*100:.2f}%')
+    print(f'Candidato 2: {cand_2/total_votos*100:.2f}%')
+    print(f'Candidato 3: {cand_3/total_votos*100:.2f}%')
+    print(f'Candidato 4: {cand_4/total_votos*100:.2f}%')
+    print(f'Candidato 5: {cand_5/total_votos*100:.2f}%')
+    print(f'Candidato 6: {cand_6/total_votos*100:.2f}%')
+else:
+    print('\nNenhum voto computado.')
 
-print(f'{cand_1,cand_2,cand_3,cand_4,cand_5,cand_6}')
+         
+        
