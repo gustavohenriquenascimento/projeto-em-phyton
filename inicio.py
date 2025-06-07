@@ -12,7 +12,7 @@ for i in range(2):
         var2 = int(input('escreva o número dos candidatos em ordem :'))
         linha.append(var2)
     matriz2.append(linha)  # matriz2 é a matriz que armazena os números dos candidatos.
-# contador de votos.
+# contador de votos. 
 cand_1 = 0
 cand_2 = 0
 cand_3 = 0
@@ -21,15 +21,9 @@ cand_5 = 0
 cand_6 = 0
 while True: # Loop para permitir múltiplos votos.
     var3= int(input('número do candidato votado  :'))
-    
-    numero = int(input("Digite um número (0 /para sair,1 /para continuar: "))
-    if numero < 0:
-        print("Número negativo ignorado.")
-        continue  # Volta para o início do laço, sem executar o restante.
-    if numero == 0:
-        break  # Sai do laço
     if var3== matriz2[0][0]:
-         print(f"você votou no candidato {matriz1[0][0]}")  #variáveis que armazenam os votos.
+         print(f"você votou no candidato {matriz1[0][0]}")  #variável var3 recebe o número do candidato votado
+         cand_1 += 1
     if var3 == matriz2[0][1]:
          print(f"você votou no candidato {matriz1[0][1]}")
          cand_2 += 1
@@ -47,8 +41,14 @@ while True: # Loop para permitir múltiplos votos.
          cand_6 += 1
     if var3 not in matriz2[0] and var3 not in matriz2[1]:
         print('Nenhum voto computado.')
+    numero = int(input("Digite um número (0 /para sair,1 /para continuar: "))
+    if numero < 0:
+        print("Número negativo ignorado.")
+        continue  # Volta para o início do laço, sem executar o restante.
+    if numero == 0:
+        break  # Sai do laço
         
-total_votos = cand_1 + cand_2 + cand_3 + cand_4 + cand_5 + cand_6
+total_votos = cand_1 + cand_2 + cand_3 + cand_4 + cand_5 + cand_6 
 
 if total_votos > 0:
     print('\nPorcentagem de votos:') # Exibe a porcentagem de votos para cada candidato
@@ -60,6 +60,4 @@ if total_votos > 0:
     print(f'{matriz1[1][2]}: {cand_6/total_votos*100:.2f}%')
 else:
     print('\nNenhum voto computado.')
-
-     #fim do código!!!!! finalmente.
-        
+    #fim do codigo!!!!!! 
