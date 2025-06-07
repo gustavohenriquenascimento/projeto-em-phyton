@@ -1,28 +1,28 @@
-matriz1= []  # matriz1 é a matriz que armazena os nomes dos candidatos.
+matriz1= []  
 for i in range(2):
     linha = []
     for j in range (3):
-        var1 = (input('escreva o nome dos candidatos em ordem :'))
+        var1 = (input('escreva o nome do candidato(e tecle enter) :'))
         linha.append(var1)
     matriz1.append(linha)
 matriz2 = []
 for i in range(2):
     linha = []
     for j in range (3):
-        var2 = int(input('escreva o número dos candidatos em ordem :'))
+        var2 = int(input('escreva o número do candidato( e tecle enter):'))
         linha.append(var2)
-    matriz2.append(linha)  # matriz2 é a matriz que armazena os números dos candidatos.
-# contador de votos. 
+    matriz2.append(linha)  
 cand_1 = 0
 cand_2 = 0
 cand_3 = 0
 cand_4 = 0
 cand_5 = 0
 cand_6 = 0
-while True: # Loop para permitir múltiplos votos.
-    var3= int(input('número do candidato votado  :'))
+while True: 
+    print('/n a votação irá começar, escolha o número do candidato que deseja votar')
+    var3= int(input('número do candidato:'))
     if var3== matriz2[0][0]:
-         print(f"você votou no candidato {matriz1[0][0]}")  #variável var3 recebe o número do candidato votado
+         print(f"você votou no candidato {matriz1[0][0]}")  
          cand_1 += 1
     if var3 == matriz2[0][1]:
          print(f"você votou no candidato {matriz1[0][1]}")
@@ -41,17 +41,17 @@ while True: # Loop para permitir múltiplos votos.
          cand_6 += 1
     if var3 not in matriz2[0] and var3 not in matriz2[1]:
         print('Nenhum voto computado.')
-    numero = int(input("Digite um número (0 /para sair,1 /para continuar: "))
+    numero = int(input("Digite um número (0 para sair/n 1 para continuar: "))
     if numero < 0:
         print("Número negativo ignorado.")
-        continue  # Volta para o início do laço, sem executar o restante.
+        continue  
     if numero == 0:
-        break  # Sai do laço
+        break  
         
 total_votos = cand_1 + cand_2 + cand_3 + cand_4 + cand_5 + cand_6 
 
 if total_votos > 0:
-    print('\nPorcentagem de votos:') # Exibe a porcentagem de votos para cada candidato
+    print('\nPorcentagem de votos:') 
     print(f'{matriz1[0][0]}: {cand_1/total_votos*100:.2f}%') 
     print(f'{matriz1[0][1]}: {cand_2/total_votos*100:.2f}%')
     print(f'{matriz1[0][2]}: {cand_3/total_votos*100:.2f}%')
@@ -60,4 +60,4 @@ if total_votos > 0:
     print(f'{matriz1[1][2]}: {cand_6/total_votos*100:.2f}%')
 else:
     print('\nNenhum voto computado.')
-    #fim do codigo!!!!!! 
+    
