@@ -1,11 +1,4 @@
-cand_1 = 0
-cand_2 = 0
-cand_3 = 0
-cand_4 = 0
-cand_5 = 0
-cand_6 = 0
-
-matriz1= []
+matriz1= []  # matriz1 é a matriz que armazena os nomes dos candidatos.
 for i in range(2):
     linha = []
     for j in range (3):
@@ -18,22 +11,26 @@ for i in range(2):
     for j in range (3):
         var2 = int(input('escreva o número dos candidatos em ordem :'))
         linha.append(var2)
-    matriz2.append(linha)
-soma = 0
-
-while True:
+    matriz2.append(linha)  # matriz2 é a matriz que armazena os números dos candidatos.
+# contador de votos.
+cand_1 = 0
+cand_2 = 0
+cand_3 = 0
+cand_4 = 0
+cand_5 = 0
+cand_6 = 0
+while True: # Loop para permitir múltiplos votos.
     var3= int(input('número do candidato votado  :'))
     
-    numero = int(input("Digite um número (0|sair,1|continuar: "))
-    
+    numero = int(input("Digite um número (0 /para sair,1 /para continuar: "))
     if numero < 0:
         print("Número negativo ignorado.")
-        continue  # Volta para o início do laço, sem executar o restante
+        continue  # Volta para o início do laço, sem executar o restante.
     if numero == 0:
         break  # Sai do laço
     if var3== matriz2[0][0]:
-        print(f"você votou no candidato {matriz1[0][0]}")
-        cand_1 += 1
+         print(f"você votou no candidato {matriz1[0][0]}")  #variável var3 recebe o número do candidato votado
+         cand_1 += 1
     if var3 == matriz2[0][1]:
          print(f"você votou no candidato {matriz1[0][1]}")
          cand_2 += 1
@@ -55,15 +52,15 @@ while True:
 total_votos = cand_1 + cand_2 + cand_3 + cand_4 + cand_5 + cand_6
 
 if total_votos > 0:
-    print('\nPorcentagem de votos:')
-    print(f'Candidato 1: {cand_1/total_votos*100:.2f}%')
-    print(f'Candidato 2: {cand_2/total_votos*100:.2f}%')
-    print(f'Candidato 3: {cand_3/total_votos*100:.2f}%')
-    print(f'Candidato 4: {cand_4/total_votos*100:.2f}%')
-    print(f'Candidato 5: {cand_5/total_votos*100:.2f}%')
-    print(f'Candidato 6: {cand_6/total_votos*100:.2f}%')
+    print('\nPorcentagem de votos:') # Exibe a porcentagem de votos para cada candidato
+    print(f'{matriz1[0][0]}: {cand_1/total_votos*100:.2f}%') 
+    print(f'{matriz1[0][1]}: {cand_2/total_votos*100:.2f}%')
+    print(f'{matriz1[0][2]}: {cand_3/total_votos*100:.2f}%')
+    print(f'{matriz1[1][0]}: {cand_4/total_votos*100:.2f}%')
+    print(f'{matriz1[1][1]}: {cand_5/total_votos*100:.2f}%')
+    print(f'{matriz1[1][2]}: {cand_6/total_votos*100:.2f}%')
 else:
     print('\nNenhum voto computado.')
 
-         
+     #fim do código!!!!! finalmente.
         
