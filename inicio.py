@@ -29,8 +29,7 @@ while True: # Loop para permitir múltiplos votos.
     if numero == 0:
         break  # Sai do laço
     if var3== matriz2[0][0]:
-         print(f"você votou no candidato {matriz1[0][0]}")  #variável var3 recebe o número do candidato votado
-         cand_1 += 1
+         print(f"você votou no candidato {matriz1[0][0]}")  #variáveis que armazenam os votos.
     if var3 == matriz2[0][1]:
          print(f"você votou no candidato {matriz1[0][1]}")
          cand_2 += 1
