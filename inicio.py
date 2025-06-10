@@ -19,7 +19,7 @@ cand_4 = 0
 cand_5 = 0
 cand_6 = 0
 while True: 
-    print('/n a votação irá começar, escolha o número do candidato que deseja votar')
+    print('a votação irá começar, escolha o número do candidato que deseja votar')
     var3= int(input('número do candidato:'))
     if var3== matriz2[0][0]:
          print(f"você votou no candidato {matriz1[0][0]}")  
@@ -41,7 +41,7 @@ while True:
          cand_6 += 1
     if var3 not in matriz2[0] and var3 not in matriz2[1]:
         print('Nenhum voto computado.')
-    numero = int(input("Digite um número (0 para sair/n 1 para continuar: "))
+    numero = int(input("Digite um número (0 para sair/ 1 para continuar): "))
     if numero < 0:
         print("Número negativo ignorado.")
         continue  
@@ -60,4 +60,3 @@ if total_votos > 0:
     print(f'{matriz1[1][2]}: {cand_6/total_votos*100:.2f}%')
 else:
     print('\nNenhum voto computado.')
-    
