@@ -1,4 +1,4 @@
-# projeto-em-phyton
+# projeto-em-python
 urna eletrônica.
 
 INTEGRANTES DO GRUPO:
